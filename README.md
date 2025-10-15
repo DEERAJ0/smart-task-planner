@@ -84,7 +84,7 @@ You can easily deploy this React app on any static hosting platform:
 * **Vercel:** Import your repo and hit *Deploy*.
 * **GitHub Pages:** Use `npm run build` → upload the `build/` folder.
 
-> **Live Demo:** [https://yourdeploymentlink.com](https://yourdeploymentlink.com) *(replace after deployment)*
+> ** Demo:** (https://drive.google.com/file/d/1MzBu-1lXS_DZBWN_YJp-uRfSjhsBxsPg/view?usp=drive_link)
 
 ---
 
@@ -130,9 +130,6 @@ smart-task-planner/
 ## 👨‍💻 Author
 
 **Deeraj Chinni**
-Frontend Developer | AI Enthusiast
-📧 [optional: your email or LinkedIn if you want to include]
-
 ---
 
 ## 🙏 Acknowledgments
