@@ -1,70 +1,153 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+# 🧠 Smart Task Planner
 
-In the project directory, you can run:
+A simple AI-powered web app that helps users break down a single goal into clear, actionable steps using the **OpenRouter LLM API** (`qwen/qwen3-vl-8b-thinking`).
+Built entirely with **React.js** — no backend or database required.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚀 Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* ✨ **Goal-to-Plan Generation:** Enter a goal, and the app automatically generates structured steps or milestones.
+* ⚡ **Real-time AI Integration:** Uses OpenRouter’s hosted LLM to fetch responses dynamically.
+* 💡 **Lightweight & Fast:** Entirely frontend-based; no local server or database setup.
+* 🖥️ **Clean UI:** Simple and minimal interface designed for clarity and speed.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠️ Tech Stack
 
-### `npm run build`
+| Layer                     | Technology                                 |
+| ------------------------- | ------------------------------------------ |
+| **Frontend**              | React.js (Create React App)                |
+| **API Client**            | Axios                                      |
+| **AI Model**              | Qwen Qwen3-VL-8B-Thinking (via OpenRouter) |
+| **Environment Variables** | `.env` for API key handling                |
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📸 Preview
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+*(You can add screenshots later if needed)*
+Example output:
 
-### `npm run eject`
+```
+Goal: Build a Portfolio Website
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Define site sections and content
+2. Design layout and color theme
+3. Implement navigation and responsiveness
+4. Add project showcases and contact form
+5. Test and deploy
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## ⚙️ Installation & Setup
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. **Clone the repository**
 
-## Learn More
+   ```bash
+   git clone https://github.com/yourusername/smart-task-planner.git
+   cd smart-task-planner
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. **Install dependencies**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   ```bash
+   npm install
+   ```
 
-### Code Splitting
+3. **Create `.env` file in the project root**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+   ```
+   REACT_APP_OPENROUTER_KEY=sk-or-your-api-key-here
+   ```
 
-### Analyzing the Bundle Size
+4. **Start the app**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+   ```bash
+   npm start
+   ```
 
-### Making a Progressive Web App
+   The app will launch at 👉 [http://localhost:3000](http://localhost:3000)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 🌐 Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+You can easily deploy this React app on any static hosting platform:
 
-### Deployment
+* **Netlify:** Just drag the `build/` folder into Netlify Drop or connect your GitHub repo.
+* **Vercel:** Import your repo and hit *Deploy*.
+* **GitHub Pages:** Use `npm run build` → upload the `build/` folder.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+> **Live Demo:** [https://yourdeploymentlink.com](https://yourdeploymentlink.com) *(replace after deployment)*
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🔐 API Key Configuration
+
+The app requires an **OpenRouter API key**:
+
+1. Go to [https://openrouter.ai/keys](https://openrouter.ai/keys)
+2. Generate your API key (starts with `sk-or-`)
+3. Add it to your `.env` file:
+
+   ```
+   REACT_APP_OPENROUTER_KEY=sk-or-your-api-key
+   ```
+4. Restart your development server after saving the file.
+
+> ⚠️ **Security note:** Never share or commit your `.env` file to GitHub.
+> It should be listed in `.gitignore` automatically.
+
+---
+
+## 🧩 Project Structure
+
+```
+smart-task-planner/
+├─ public/
+│  └─ index.html
+├─ src/
+│  ├─ api/
+│  │  └─ openrouter.js
+│  ├─ components/
+│  │  ├─ GoalForm.jsx
+│  │  └─ PlanView.jsx
+│  ├─ App.js
+│  └─ index.js
+├─ .env
+├─ package.json
+└─ README.md
+```
+
+---
+
+## 👨‍💻 Author
+
+**Deeraj Chinni**
+Frontend Developer | AI Enthusiast
+📧 [optional: your email or LinkedIn if you want to include]
+
+---
+
+## 🙏 Acknowledgments
+
+* [OpenRouter](https://openrouter.ai) for providing free access to cutting-edge language models
+* [React](https://react.dev) for the lightweight and flexible frontend framework
+* Axios for simplified API handling
+
+---
+
+## 📜 License
+
+This project is for **educational and assessment purposes** only.
+© 2025 Deeraj Chinni. All rights reserved.
+
+---
+
+Would you like me to also make a **shorter version (1-page summary)** for uploading to a company portal or assessment form (with project description + key features only)?
