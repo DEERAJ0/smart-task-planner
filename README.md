@@ -146,5 +146,3 @@ This project is for **educational and assessment purposes** only.
 © 2025 Deeraj Chinni. All rights reserved.
 
 ---
-
-Would you like me to also make a **shorter version (1-page summary)** for uploading to a company portal or assessment form (with project description + key features only)?
